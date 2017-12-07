@@ -1,0 +1,8 @@
+.cust_responsive-video{
+    width: 100%
+       
+}
+.cust_nav{
+    position: fixed;
+    z-index: 1000;
+}

@@ -1,0 +1,380 @@
+.cust-nav {
+    position: fixed;
+    z-index: 1000;
+}
+
+/*video*/
+
+video {
+    width: 100%;
+    height: auto;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*:before,
+*:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+/*html { font: normal 1em/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif; height: 100%; }*/
+
+/*body { height: 100%; }*/
+
+#video-viewport {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+video {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.fullsize-video-bg {
+    height: 100%;
+    overflow: hidden;
+}
+
+.fullsize-video-bg:before {
+    content: "";
+    background: rgba(114, 45, 0, .35);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.fullsize-video-bg:after {
+    content: "";
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDY3IDc5LjE1Nzc0NywgMjAxNS8wMy8zMC0yMzo0MDo0MiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgTWFjaW50b3NoIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjI4RkZBQTgzNzg1NzExRTU4NTQyODc3OUM4MTZGMUREIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjI4RkZBQTg0Nzg1NzExRTU4NTQyODc3OUM4MTZGMUREIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MjhGRkFBODE3ODU3MTFFNTg1NDI4Nzc5QzgxNkYxREQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MjhGRkFBODI3ODU3MTFFNTg1NDI4Nzc5QzgxNkYxREQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz66uHInAAAAIUlEQVR42mL5//8/AyMj42YGIGBigABfEMEIkoEBgAADAKvuBwVS8BAjAAAAAElFTkSuQmCC);
+    background-size: 2px 2px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+
+.fullsize-video-bg .inner {
+    display: table;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    position: absolute;
+    z-index: 2;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, .5);
+    color: white;
+}
+
+.fullsize-video-bg .inner > div {
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0 2em;
+}
+
+
+.vid-txt {
+    font-family: 'Monoton', cursive;
+    font-size: 3em;
+    line-height: .9;
+    font-weight: 900;
+    letter-spacing: -.025em;
+    text-transform: uppercase;
+    margin-bottom: .5em;
+}
+
+/*p { font-family: 'Alfa Slab One', cursive; font-size: 1.5em;  }*/
+
+/*arrow on the video*/
+
+.mbr-arrow {
+    position: relative;
+    bottom: 55px;
+    /*    left: 50%;*/
+    margin-left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 4;
+}
+
+/*flipbox*/
+
+.flip-box {
+    margin: 10px;
+    border: dotted;
+    background: #ff000080;
+    border-radius: 10px;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+}
+
+/*parallax*/
+
+.parallax-container {
+    height: 200px;
+}
+
+h3 {
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    /*font-size: 3em;*/
+}
+
+p {
+    font-size: 1.3em;
+    text-indent: 50px;
+    /*    text-align: justify;*/
+    /*letter-spacing: 3px;*/
+}
+
+/*************************************/
+
+/* Social Icons */
+
+#social_side_links {
+    top: 40%;
+    right: 0;
+    padding: 0;
+    z-index: 2;
+    position: fixed;
+}
+
+#social_side_links li a {
+    display: inline-block;
+    border-radius: 45px;
+
+}
+
+#social_side_links li a img {
+    display: block;
+    max-width: 45px;
+    padding: 10px;
+    -webkit-transition: background .2s ease-in-out;
+    -moz-transition: background .2s ease-in-out;
+    -o-transition: background .2s ease-in-out;
+    transition: background .2s ease-in-out;
+}
+
+#social_side_links li a:hover img {
+    background: rgba(0, 0, 0, .2);
+    border-radius: 45px;
+}
+
+
+
+/* Scroll up button */
+
+.scroll-button {
+
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    padding: 0px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    right: 50px;
+    bottom: 50px;
+    filter: alpha(opacity=50);
+    opacity: 0.6;
+    visibility: visible;
+    box-sizing: border-box;
+
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+    /*border: solid 2px rgb(210, 104, 211);*/
+    border: none;
+    opacity: 0.6;
+    cursor: pointer;
+    */ transition: all 1.2s ease-in-out;
+    -webkit-transition: all 1.2s;
+    -moz-transition: all 1.2s;
+    -ms-transition: all 1.2s;
+    -o-transition: all 1.2s;
+
+    /* background: #6A5ACD; */
+    position: fixed;
+
+    color: #33ccff;
+    /*color: rgb(249, 104, 211); */
+}
+
+.scroll-button:hover {
+    filter: alpha(opacity=100);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+}
+
+.scroll-button--hidden {
+    filter: alpha(opacity=0);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+    /*display:none;*/
+    visibility: hidden;
+}
+
+/* map starts here */
+
+.gmap {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+
+/*flip image*/
+
+/*
+.flip-container {
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -o-perspective: 1000;
+  perspective: 1000;
+
+	border: 0px solid #ccc;
+}
+*/
+
+.flip-container:hover .flipper,
+.flip-container.hover .flipper {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+/*
+.flip-container,
+.front,
+.back {
+    width: 320px;
+    height: 220px;
+}
+*/
+
+.flipper {
+    -webkit-transition: 0.9s;
+    -webkit-transform-style: preserve-3d;
+
+    -moz-transition: 0.9s;
+    -moz-transform-style: preserve-3d;
+
+    -o-transition: 0.9s;
+    -o-transform-style: preserve-3d;
+
+    transition: 0.9s;
+    transform-style: preserve-3d;
+
+    position: relative;
+}
+
+.front,
+.back {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+}
+
+/*
+.front {
+    background: url(http://davidwalsh.name/demo/dwflip.jpg) 0 0 no-repeat;
+    z-index: 2;
+    
+}
+*/
+
+.back {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+
+    background: red;
+    overflow: hidden;
+    height: 100%;
+    width: 100%; 
+    border-radius: none;
+    
+}
+
+/*
+.back-logo {
+    position: absolute;
+    top: 40px;
+    left: 90px;
+    width: 160px;
+    height: 117px;
+    background: url(http://davidwalsh.name/demo/logo.png) 0 0 no-repeat;
+}
+
+.back-title {
+    font-weight: bold;
+    color: #00304a;
+    position: absolute;
+    top: 180px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    text-shadow: 0.1em 0.1em 0.05em #acd7e5;
+    font-family: Courier;
+    font-size: 2em;
+} */
+
+/*
+.back p {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 0 0px;
+    font-family: arial;
+    line-height: 2em;
+
+}
+*/
+.panel {
+/*
+    width: 100%;
+    height: 500px;
+*/
+    z-index:0; 
+    -webkit-transform: translateZ( 0 );
+    transform: translateZ( 0 );
+    -webkit-transition: -webkit-transform 2.6s ease-in-out;
+    transition: transform 1.9s ease-in-out;
+/*
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+*/
+}
+
+a[ id= "next" ]:target ~ div.panel {
+    -webkit-transform: translateY( 0px );
+    transform: translateY( 0px );
+}
